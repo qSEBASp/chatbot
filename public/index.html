@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chatbot-wrapper">
+            <div class="chatbot-header">
+                <h1>🤖 Asistente IA</h1>
+                <p>Pregúntame lo que quieras</p>
+            </div>
+            
+            <div class="chatbot-messages" id="messagesContainer">
+                <div class="message bot-message">
+                    <p>¡Hola! Soy tu asistente con IA. ¿En qué puedo ayudarte hoy?</p>
+                </div>
+            </div>
+            
+            <div class="chatbot-input-area">
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    placeholder="Escribe tu pregunta aquí..." 
+                    autocomplete="off"
+                >
+                <button id="sendBtn" class="send-btn">Enviar</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
