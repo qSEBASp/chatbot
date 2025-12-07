@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -30,10 +30,17 @@ body {
 }
 
 .chatbot-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
     color: white;
     padding: 20px;
     text-align: center;
+    border-bottom: 2px solid #0099ff;
+}
+
+.dragon-logo {
+    width: 140px;
+    height: 100px;
+    margin-bottom: 15px;
 }
 
 .chatbot-header h1 {
@@ -76,12 +83,13 @@ body {
 }
 
 .bot-message p {
-    background: #f0f0f0;
-    color: #333;
+    background: #1a1f3a;
+    color: #e0e0e0;
     padding: 12px 16px;
     border-radius: 12px;
     max-width: 80%;
     word-wrap: break-word;
+    border-left: 3px solid #0099ff;
 }
 
 .user-message {
@@ -89,7 +97,7 @@ body {
 }
 
 .user-message p {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0099ff 0%, #0066cc 100%);
     color: white;
     padding: 12px 16px;
     border-radius: 12px;
@@ -101,27 +109,30 @@ body {
     display: flex;
     gap: 10px;
     padding: 15px;
-    background: #f9f9f9;
-    border-top: 1px solid #e0e0e0;
+    background: #0f1419;
+    border-top: 1px solid #0099ff;
 }
 
 #userInput {
     flex: 1;
     padding: 12px 16px;
-    border: 1px solid #ddd;
+    border: 1px solid #0099ff;
     border-radius: 25px;
     font-size: 14px;
     outline: none;
     transition: border-color 0.3s;
+    background: #1a1f3a;
+    color: #e0e0e0;
 }
 
 #userInput:focus {
-    border-color: #667eea;
+    border-color: #00ccff;
+    box-shadow: 0 0 10px rgba(0, 153, 255, 0.3);
 }
 
 .send-btn {
     padding: 12px 24px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0099ff 0%, #0066cc 100%);
     color: white;
     border: none;
     border-radius: 25px;
@@ -133,7 +144,7 @@ body {
 
 .send-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 153, 255, 0.4);
 }
 
 .send-btn:active {
@@ -154,7 +165,7 @@ body {
 .loading span {
     width: 8px;
     height: 8px;
-    background: #667eea;
+    background: #0099ff;
     border-radius: 50%;
     animation: bounce 1.4s infinite;
 }
@@ -184,15 +195,15 @@ body {
 }
 
 .chatbot-messages::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #0a0e27;
     border-radius: 10px;
 }
 
 .chatbot-messages::-webkit-scrollbar-thumb {
-    background: #667eea;
+    background: #0099ff;
     border-radius: 10px;
 }
 
 .chatbot-messages::-webkit-scrollbar-thumb:hover {
-    background: #764ba2;
+    background: #00ccff;
 }

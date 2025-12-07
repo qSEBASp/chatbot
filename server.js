@@ -19,13 +19,18 @@ if (!process.env.HUGGINGFACE_API_KEY) {
 }
 
 const hf = new HfInference(process.env.HUGGINGFACE_API_KEY);
-const MODEL = 'google/flan-t5-base';  // Modelo base de FLAN-T5
+const MODEL = 'mistralai/Mistral-7B-Instruct-v0.1';  // Modelo más potente y estable
 
 // Respuestas predefinidas para comandos rápidos
 const quickResponses = {
   'hola': '¡Hola! Soy tu asistente con IA. ¿En qué puedo ayudarte hoy?',
   'ayuda': 'Puedes preguntarme cualquier cosa. Estoy aquí para ayudarte con información general.',
-  'adiós': '¡Hasta luego! Fue un placer ayudarte.'
+  'adiós': '¡Hasta luego! Fue un placer ayudarte.',
+  'que hora es en colombia': 'En Colombia, la hora actual depende de tu zona. Colombia está en UTC-5. ¿Necesitas saber la hora exacta?',
+  'hora colombia': 'En Colombia, la hora actual depende de tu zona. Colombia está en UTC-5.',
+  'qué hora es': 'No tengo acceso a la hora en tiempo real, pero puedes verificarla en tu dispositivo.',
+  'gracias': '¡De nada! Estoy aquí para ayudarte.',
+  'ok': 'Perfecto, ¿hay algo más en lo que pueda ayudarte?'
 };
 
 app.post('/chat', async (req, res) => {
